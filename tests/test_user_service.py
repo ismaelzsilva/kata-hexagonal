@@ -1,5 +1,4 @@
 import pytest
-from unittest.mock import Mock
 
 from application.user_service import UserService
 from domain.models import UserEntity
@@ -46,4 +45,4 @@ class TestUserService:
         with pytest.raises(
             ValueError, match="El usuario ya existe con mismo email"
         ):
-            user_service.register_user(new_user) 
+            user_service.register_user(new_user)
